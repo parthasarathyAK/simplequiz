@@ -4,18 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <style>
-      body{
-            text-align: center;
-            font-size: 1.5vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+  <link rel="stylesheet" href="style.css">
+    
 
         
-    </style>
+    
 </head>
 <body>
     <div class="quizcontainer">
@@ -40,29 +33,10 @@
     </div>
    
 
-    <script>
-    function calculate(){
-        score=0
-        var answers={
-            q1:"paris",
-            q2:"Mars",
-            q3:"bluewhale",
-        }
-        for (var question in answers){
-           var useranswer=document.querySelector(`input[name=${question}]:checked`)
-       if(useranswer && useranswer.value === answers[question])  {
-        score++
-       }  
+    
+    <script src="script.js"></script>
 
 
-        }
-        var quizform=document.getElementById("quizform")
-        quizform.style.display="none"
-        var result=document.getElementById("quizresult")
-        result.innerHTML=`<h2> Your Quiz Result</h2><p>score:${score}</p>`
-    }
-
-
-    </script>
+    
 </body>
 </html>
